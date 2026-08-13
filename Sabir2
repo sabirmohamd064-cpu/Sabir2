@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sabir Mohamd | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(135deg, #0f172a, #172554);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #7dd3fc;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        /* Sections */
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #38bdf8;
+        }
+
+        .section-title p {
+            color: #94a3b8;
+        }
+
+        /* About */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .skill h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .skill p {
+            color: #94a3b8;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .project h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        /* Contact */
+        .contact {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-box {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .contact-box p {
+            margin: 15px 0;
+            color: #cbd5e1;
+        }
+
+        .contact-box a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 70px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Sabir</div>
+
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">عني</a></li>
+            <li><a href="#skills">مهاراتي</a></li>
+            <li><a href="#projects">مشاريعي</a></li>
+            <li><a href="#contact">تواصل</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                مرحباً، أنا <span>Sabir</span>
+            </h1>
+
+            <h2>
+                طالب برمجة ومهتم بالذكاء الاصطناعي
+            </h2>
+
+            <p>
+                أتعلم البرمجة وتطوير البرمجيات، وأهتم بتطوير المواقع
+                والذكاء الاصطناعي والتكنولوجيا الحديثة.
+            </p>
+
+            <a href="#projects" class="btn">
+                شاهد مشاريعي
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+                تواصل معي
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <div class="section-title">
+            <h2>من أنا؟</h2>
+            <p>نبذة قصيرة عني</p>
+        </div>
+
+        <div class="about">
+
+            <p>
+                أنا Sabir Mohamd، مهتم بمجال البرمجة وتطوير البرمجيات.
+                أتعلم C++ وأعمل على تطوير مهاراتي في Software Engineering.
+                كما أهتم بالذكاء الاصطناعي وتطوير المواقع الإلكترونية
+                وإنشاء مشاريع تقنية مفيدة.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <div class="section-title">
+            <h2>مهاراتي</h2>
+            <p>الأشياء التي أتعلمها وأهتم بها</p>
+        </div>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>C++</h3>
+                <p>تعلم أساسيات البرمجة باستخدام C++</p>
+            </div>
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>إنشاء صفحات ومواقع الويب</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>تصميم واجهات المواقع</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>إضافة التفاعل للمواقع</p>
+            </div>
+
+            <div class="skill">
+                <h3>AI</h3>
+                <p>الذكاء الاصطناعي وأدواته</p>
+            </div>
+
+            <div class="skill">
+                <h3>Software Engineering</h3>
+                <p>تعلم هندسة البرمجيات</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <div class="section-title">
+            <h2>مشاريعي</h2>
+            <p>بعض المشاريع التي أعمل عليها</p>
+        </div>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <h3>🌐 موقع شخصي</h3>
+
+                <p>
+                    موقع Portfolio شخصي لعرض معلوماتي
+                    ومهاراتي ومشاريعي.
+                </p>
+
+                <a href="#" class="btn">
+                    مشاهدة المشروع
+                </a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>🤖 مشروع بالذكاء الاصطناعي</h3>
+
+                <p>
+                    مشروع يعتمد على أدوات الذكاء الاصطناعي
+                    لإنشاء حلول تقنية.
+                </p>
+
+                <a href="#" class="btn">
+                    قريباً
+                </a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>💻 مشروع C++</h3>
+
+                <p>
+                    مشروع برمجي باستخدام C++ لتطبيق
+                    ما تعلمته في البرمجة.
+                </p>
+
+                <a href="#" class="btn">
+                    قريباً
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <div class="section-title">
+            <h2>تواصل معي</h2>
+            <p>يمكنك التواصل معي عبر</p>
+        </div>
+
+        <div class="contact">
+
+            <div class="contact-box">
+
+                <p>
+                    📧 البريد الإلكتروني:
+                    <a href="mailto:your@email.com">
+                        your@email.com
+                    </a>
+                </p>
+
+                <p>
+                    📱 الهاتف:
+                    <a href="tel:+212600000000">
+                        +212 600 000 000
+                    </a>
+                </p>
+
+                <p>
+                    📍 المغرب
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Sabir Mohamd — جميع الحقوق محفوظة
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        // رسالة ترحيب في Console
+        console.log("مرحباً بك في موقع Sabir!");
+
+    </script>
+
+</body>
+</html>
